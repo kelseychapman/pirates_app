@@ -1,6 +1,8 @@
-var app = angular.module('pirates', [])
-
-app.controller('piratesController', function($scope) {
- $scope.view = {};
- $scope.view.total = 4;
+var app = angular.module('pirates', ['ngRoute']);
+app.config(function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: '../views/pirates.html',
+        controller: 'PiratesController'
+      })
 });
