@@ -1,14 +1,33 @@
-<h1>Pirates</h1>
+<!-- <h1>Pirates</h1>
+<button type="button" class="btn btn-outline-info">Add A Pirate</button>
+
 <div class="panel-body" ng-repeat="pirate in view.pirates">
     <div class="row">
-      <div class="col-sm-4">
-        <img ng-src="{{pirate.image_url}}" alt="">
-      </div>
       <div class="col-sm-8">
+        <img ng-src="{{pirate.image_url}}" alt="">
         <h2>{{ pirate.name }}</h2>
         <p>Poison: {{ pirate.poison }}</p>
         <p>Accessory: {{ pirate.accessory }}</p>
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="container">
+    <h1>Pirates</h1>
+    <button type="button" class="btn btn-outline-info">Add A Pirate</button>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" ng-repeat="pirate in view.pirates">
+                <div class="card-block">
+                  <img class="card-img-top" height="200px" ng-src="{{pirate.image_url}}" alt="">
+                    <h4 class="card-title">{{ pirate.name }}</h4>
+                    <p class="card-text">Poison: {{ pirate.poison }}</p>
+                    <p>Accessory: {{ pirate.accessory }}</p>
+                    <button type="button" class="btn btn-outline-info">View Pirate</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
